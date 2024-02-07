@@ -1,4 +1,6 @@
 import { ModeToggle } from "./mode-toggle";
+import { DrawerTrigger } from "@/components/ui/drawer";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   return (
@@ -9,6 +11,9 @@ export default function Navbar() {
         alt="logo"
       />
       <div className="flex gap-4">
+        <DrawerTrigger asChild>
+          <Button variant="outline">Open Drawer</Button>
+        </DrawerTrigger>
         <ModeToggle />
         <div className="text-3xl text-blue-500 font-bold">Build For Bharat</div>
       </div>
